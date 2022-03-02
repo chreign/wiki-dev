@@ -13,6 +13,18 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Mac%2520app%2520related</loc>
+		<lastmod>2022-03-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Mac%2520tips</loc>
+		<lastmod>2022-03-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:SearchBar</loc>
 		<lastmod>2022-03-02</lastmod>
 		<changefreq>monthly</changefreq>
