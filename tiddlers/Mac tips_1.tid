@@ -1,0 +1,46 @@
+created: 20220302192102065
+creator: chreign
+modified: 20220302202244377
+modifier: chreign
+tags: Mac
+title: Mac tips
+tmap.id: d1e095a3-f7f3-4d02-85c8-0400b2703239
+type: text/vnd.tiddlywiki
+
+* Copy file content to clipboard
+
+```sh
+pbcopy < $filePath
+```
+
+* Remove developer check
+
+```sh
+xattr -d com.apple.quarantine /Applications/<app-name>.app
+```
+
+* Check java home
+/usr/libexec/java_home -V/usr/libexec/java_home -V
+
+* Check shell version
+echo $SHELL
+
+* Update jave home for user
+** For bash
+
+```sh
+~/.bash_profile or .bashrc
+```
+** For zsh
+```sh
+~/.zshrc
+```
+```sh
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk<version>.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+* Create a Symbolic link (Sysmlinks)
+```sh
+ln -s /path/to/original /path/to/link
+```

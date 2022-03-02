@@ -1,0 +1,22 @@
+created: 20220302201959111
+creator: chreign
+modified: 20220302202139207
+modifier: chreign
+tags: Mac
+title: Mac app related
+tmap.id: 4de5305d-3b08-49af-9e15-146a2a6e0b44
+type: text/vnd.tiddlywiki
+
+
+* Microsoft Remote Desktop
+[[Disable enforced password|https://services.dartmouth.edu/TDClient/1806/Portal/KB/ArticleDet?ID=64932]] for cyberark: 
+
+```sh
+defaults write com.microsoft.rdc.macos ClientSettings.EnforceCredSSPSupport 0
+```
+
+* Reconnect to self service server if failed from App
+```sh
+$sudo -s
+$jamf recon
+```
