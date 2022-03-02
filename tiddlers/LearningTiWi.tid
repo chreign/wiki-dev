@@ -1,0 +1,18 @@
+created: 20220302153743479
+creator: chreign
+modified: 20220302172129297
+modifier: chreign
+tags: TiWi
+title: LearningTiWi
+tmap.id: 90bc0df5-1797-4e80-8bdc-8065a8da1907
+type: text/vnd.tiddlywiki
+
+* [[create table of conent|https://tiddlywiki.com/#Adding%20a%20table%20of%20contents%20to%20the%20sidebar]]
+
+* list tags
+
+```html
+<<list-links "[tag[tag-name]]">>
+```
+
+Reference of [[WikiText|https://tiddlywiki.com/#WikiText]]

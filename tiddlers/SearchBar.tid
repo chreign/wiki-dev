@@ -1,0 +1,46 @@
+created: 20220302172508214
+creator: chreign
+modified: 20220302173059819
+modifier: chreign
+tags: 
+title: SearchBar
+tmap.id: a4e3380d-1c7d-4c80-b706-0e40d42a449b
+type: text/vnd.tiddlywiki
+
+<$set name="searchTiddler" value="$:/temp/search">
+<div class="tc-search">
+<$edit-text tiddler="$:/temp/search" type="search" tag="input"
+focus={{$:/config/Search/AutoFocus}} focusPopup=<<qualify
+"$:/state/popup/search-dropdown">> class="tc-popup-handle"/>
+<$reveal state="$:/temp/search" type="nomatch" text="">
+
+<$button popup=<<qualify "$:/state/popup/search-dropdown">>
+class="tc-btn-invisible">
+<$set name="resultCount" value="""<$count
+filter="[!is[system]search{$(searchTiddler)$}]"/>""">
+{{$:/core/images/down-arrow}} {{$:/language/Search/Matches}}
+</$set>
+</$button>
+</$reveal>
+<$reveal state="$:/temp/search" type="match" text="">
+<$button to="$:/AdvancedSearch"
+tooltip={{$:/language/Buttons/AdvancedSearch/Hint}}
+aria-label={{$:/language/Buttons/AdvancedSearch/Caption}}
+class="tc-btn-invisible">
+{{$:/core/images/advanced-search-button}}
+</$button>
+</$reveal>
+</div>
+
+<$reveal tag="div" class="tc-block-dropdown-wrapper" state="$:/temp/search"
+type="nomatch" text="">
+
+<$reveal tag="div" class="tc-block-dropdown tc-search-drop-down
+tc-popup-handle" state=<<qualify "$:/state/popup/search-dropdown">>
+type="nomatch" text="" default="">
+
+{{$:/core/ui/SearchResults}}
+
+</$reveal>
+</$reveal>
+</$set>
