@@ -1,0 +1,26 @@
+created: 20220302204158577
+creator: chreign
+modified: 20220302205847719
+modifier: chreign
+tags: [[Spring data]]
+title: EntityManagerFactory
+tmap.id: e272bbf1-790b-44d1-bd43-63dd1300c3d3
+type: text/vnd.tiddlywiki
+
+when LocalContainerEntityManagerFactoryBean is defined in xml, Spring will try to load META-INF/persistence.xml if exists. -> Remove persistence.xml for Spring auto configure
+
+Sample of a bean
+
+```java
+@Bean
+LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaDialect jpaDialect, JpaVendorAdapter jpaVendorAdapter, Properties jpaProperties) {
+    LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
+    entityManagerFactory.setDataSource(dataSource);
+    entityManagerFactory.setPersistenceUnitName("xxx");
+    entityManagerFactory.setJpaProperties(jpaProperties);
+    entityManagerFactory.setJpaVendorAdapter(jpaVendorAdapter);
+    entityManagerFactory.setJpaDialect(jpaDialect);
+    entityManagerFactory.setPackagesToScan("xxx.xxx.model");
+    return entityManagerFactory;
+}
+```
