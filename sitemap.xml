@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://onetwo.ren/wiki/#:EntityManagerFactory</loc>
-		<lastmod>2022-03-02</lastmod>
+		<lastmod>2022-03-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Index</loc>
-		<lastmod>2022-03-02</lastmod>
+		<lastmod>2022-03-04</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:LearningTiWi</loc>
 		<lastmod>2022-03-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:MSSQL</loc>
+		<lastmod>2022-03-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -31,20 +37,38 @@
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:SQL</loc>
+		<lastmod>2022-03-04</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:SearchBar</loc>
 		<lastmod>2022-03-02</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Spring%2520boot%2520test%2520log</loc>
+		<lastmod>2022-03-11</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:Spring%2520data</loc>
-		<lastmod>2022-03-02</lastmod>
+		<lastmod>2022-03-04</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Spring%2520default%2520config</loc>
+		<lastmod>2022-03-08</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>https://onetwo.ren/wiki/#:Spring</loc>
-		<lastmod>2022-03-02</lastmod>
+		<lastmod>2022-03-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
@@ -69,6 +93,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:TiddlyWikiIconWhite.png</loc>
 		<lastmod>2020-06-05</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:az%2520webapp%2520configuration</loc>
+		<lastmod>2022-03-04</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
