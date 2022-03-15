@@ -1,15 +1,19 @@
 created: 20220302153531899
 creator: chreign
-modified: 20220302204832559
+modified: 20220304001639981
 modifier: chreign
 tags: Spring
 title: Spring data
 tmap.id: 78dd8d33-aa38-49c5-a89b-b7eddcd81159
 type: text/vnd.tiddlywiki
 
-CrudRepository bean not found
+!!! ''CrudRepository'' bean not found
 
 * @EnableJpaRepositories is required
 * the default scan is based on the same and sub package
 
-[[HikariCP|https://github.com/brettwooldridge/HikariCP]] vs [[Oracle UCP|https://docs.oracle.com/cd/E18283_01/java.112/e12265/optimize.htm]]
+!!! [[HikariCP|https://github.com/brettwooldridge/HikariCP]] vs [[Oracle UCP|https://docs.oracle.com/cd/E18283_01/java.112/e12265/optimize.htm]]
+
+!!! ''EntityManagerFactory'':
+
+<<reuse-tiddler "EntityManagerFactory">>

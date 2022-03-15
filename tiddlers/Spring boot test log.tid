@@ -1,0 +1,33 @@
+created: 20220310235127436
+creator: chreign
+modified: 20220311000711017
+modifier: chreign
+tags: Spring issue
+title: Spring boot test log
+tmap.id: ad77634f-4cb4-4448-9217-61a7b6d975a8
+type: text/vnd.tiddlywiki
+
+''issue'': LoggerFactory is not a Logback LoggerContext but Logback is on the classpath. Either remove Logback or the competing implementation (class org.apache.logging.slf4j.Log4jLoggerFactory loaded from file:xxx/org/apache/logging/log4j/log4j-slf4j-impl/2.17.1/log4j-slf4j-impl-2.17.1.jar)
+
+''reason'': we include spring-boot-starter-log4j2 which brings in slf4j and log4j2 and test with plugin maven-surefire-plugin and cobertura-maven-plugin for code coverage. the cobertura plugin brings in  logback-classic which will cause conflict of sl4j binding
+
+''resolution'': exclude  logback-classic from the plugin
+
+```xml
+<dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>net.sourceforge.cobertura</groupId>
+      <artifactId>cobertura</artifactId>
+      <version>2.1.1</version>
+      <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+</dependencyManagement>
+```

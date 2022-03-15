@@ -1,0 +1,9 @@
+created: 20220304001908223
+creator: chreign
+modified: 20220304002021530
+modifier: chreign
+title: SQL
+tmap.id: 1026b796-9458-4238-bbad-8b7cc6684b4a
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />

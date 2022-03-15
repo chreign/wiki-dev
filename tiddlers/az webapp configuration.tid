@@ -1,0 +1,10 @@
+created: 20220304201659881
+creator: chreign
+modified: 20220304202342669
+modifier: chreign
+tags: az
+title: az webapp configuration
+tmap.id: eee81b65-1993-4ae4-a9ee-d03ef2b13279
+type: text/vnd.tiddlywiki
+
+[[timezone|https://en.wikipedia.org/wiki/List_of_tz_database_time_zones]]: WEBSITE_TIME_ZONE=America/Chicago

@@ -1,0 +1,39 @@
+created: 20220304143303369
+creator: chreign
+modified: 20220308002342748
+modifier: chreign
+tags: Spring
+title: Spring default config
+tmap.id: c9bac98e-1113-43bf-a67c-638d1ea26f0d
+type: text/vnd.tiddlywiki
+
+!!! ''header size limit''
+
+```
+server.max-http-header-size=1MB
+```
+
+!!! ''file size limit''
+
+file size for single file (default 1Mb), request size for the single request (default 10Mb)
+
+* Spring boot 1.4
+
+```
+spring.http.multipart.maxFileSize=10MB
+spring.http.multipart.maxRequestSize=100MB
+```
+* Spring boot 2.0
+
+```
+spring.servlet.multipart.max-file-size=10MB
+spring.servlet.multipart.max-request-size=100MB
+```
+
+!!! ''Enable tomcat log''
+
+```
+server.tomcat.accesslog.enabled=true
+logging.level.org.apache.tomcat=DEBUG
+logging.level.org.apache.catalina=DEBUG
+```

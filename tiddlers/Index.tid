@@ -1,11 +1,11 @@
 caption: My dev notes
 created: 20220223015258723
 creator: TidGiUser
-modified: 20220302153525575
+modified: 20220304002117500
 modifier: chreign
 tags: 
 title: Index
 tmap.id: 2c9e7782-09d8-4060-b2f0-1f24748a6599
 type: text/vnd.tiddlywiki
 
-<<list-links "[tag[Index]]">>
+<$macrocall $name="locator-view" baseTitle=<<currentTiddler>> />

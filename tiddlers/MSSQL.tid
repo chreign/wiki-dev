@@ -1,0 +1,17 @@
+created: 20220304001059095
+creator: chreign
+modified: 20220304172208290
+modifier: chreign
+tags: SQL
+title: MSSQL
+tmap.id: e792b249-3ad0-4341-9ddc-9389f310a886
+type: text/vnd.tiddlywiki
+
+choose random row by below order, refer to [[here|https://stackoverflow.com/questions/848872/select-n-random-rows-from-sql-server-table]]:
+
+# use TABLESAMPLE if can accpet not very strict random
+> rows is not exactly row number, if the number is too small, it may return empty result
+> SELECT * FROM ECDD_CUST_INDVDL TABLESAMPLE (30 ROWS);
+> SELECT * FROM ECDD_CUST_INDVDL TABLESAMPLE (1 PERCENT);
+# add where condition 0.01 >= CAST(CHECKSUM(NEWID(), <column_name>) & 0x7fffffff AS float) / CAST (0x7fffffff AS int)
+# order by newid() - this performance is not good
