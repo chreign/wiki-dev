@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
+		<loc>https://onetwo.ren/wiki/#:Bash%2520return%25201</loc>
+		<lastmod>2022-04-08</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
 		<loc>https://onetwo.ren/wiki/#:EntityManagerFactory</loc>
 		<lastmod>2022-03-04</lastmod>
 		<changefreq>monthly</changefreq>
@@ -45,6 +51,12 @@
 	<url>
 		<loc>https://onetwo.ren/wiki/#:SearchBar</loc>
 		<lastmod>2022-03-02</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>https://onetwo.ren/wiki/#:Spring%2520Boot%2520Executable%2520Jar%2520with%2520classpath</loc>
+		<lastmod>2022-03-15</lastmod>
 		<changefreq>monthly</changefreq>
 		<priority>0.5</priority>
 	</url>
