@@ -1,0 +1,33 @@
+created: 20220408220933480
+creator: chreign
+modified: 20220408222958662
+modifier: chreign
+tags: unix
+title: Bash return 1
+tmap.id: bdfdf655-242a-46ce-adb5-0ff29e1dd316
+type: text/vnd.tiddlywiki
+
+''issue'': the script exit when grep cannot find result without continue
+
+''reason'': grep return exit code 1 when not find result and current session the shell flag is set for -e which means Exit immediately if a command exits with a non-zero status
+
+''solution'':
+
+# unset the flag before executing the command and then set it back after the command. 
+
+```
+set +e
+result=`echo $text | grep -Eo "\-one\-|\-two\-|\-three\-" | tr -d "-" `
+set -e
+```
+# use "or true" to force it return non zero
+
+```
+result=`echo $text | grep -Eo "\-one\-|\-two\-|\-three\-" | tr -d "-" || true`
+```
+
+''tips'': 
+
+* to check current flag: echo $-
+* to check what the flag means: help set
+* to go to bash mode when in zsh, type bash then enter

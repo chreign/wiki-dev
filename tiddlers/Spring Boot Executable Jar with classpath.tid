@@ -1,0 +1,31 @@
+created: 20220315202209474
+creator: chreign
+modified: 20220315203115320
+modifier: chreign
+tags: Spring issue
+title: Spring Boot Executable Jar with classpath
+tmap.id: f7a3cab2-61aa-4cdb-8e74-9824be6210be
+type: text/vnd.tiddlywiki
+
+''issue'': when running spring boot as fat jar, it does not load the files which requires in the classpath
+
+''reason'': spring boot executable jar does not load classpath as normal java command "-classpath $CLASSPATH"
+
+''resolution'': config the maven plugin to ZIP layout. This will direct Spring Boot to use PropertiesLauncher, which allows loading external resources from "loader.path".
+
+```xml
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <configuration>
+        <layout>ZIP</layout>
+    </configuration>
+</plugin>
+```
+
+```
+java -Dloader.path="path-of-the-folder" -jar app.jar
+```
+
+
+refer to [[doc|https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/#packaging]]
