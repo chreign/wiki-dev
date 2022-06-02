@@ -1,0 +1,70 @@
+created: 20220602204956025
+creator: chreign
+modified: 20220602210229906
+modifier: chreign
+tags: mvn
+title: maven skip parent execution for plugin
+tmap.id: 16acec3e-27af-4858-ad27-8eed23be74cc
+type: text/vnd.tiddlywiki
+
+''promblem'': when added pugin in parent, it will execute in parent also. but sometimes we don't want it execute in parent since not needed or it will fail due to missing some required files (should be in child)
+
+''solution'': 
+
+# config the plugin in plugin  management with execution id
+# add the plugin in build with inherited false and excution phase as none for that id
+
+''sample'':
+
+```xml
+    <build>
+        <plugins>
+            <!-- start of maven assembly plugin -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
+                <!-- to allow run in child but not parent pom-->
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>make-assembly-configs</id>
+                        <phase>none</phase>
+                    </execution>
+                </executions>
+            </plugin>
+			</plugins>
+		</build>
+        <pluginManagement>
+            <plugins>
+                <!-- start of maven assembly plugin -->
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.1.1</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.sample.demo</groupId>
+                            <artifactId>some-assembly-descriptor</artifactId>
+                            <version>1.0.0</version>
+                        </dependency>
+                    </dependencies>
+                    <executions>
+                        <execution>
+                            <id>make-assembly-configs</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <appendAssemblyId>false</appendAssemblyId>
+                               
+                                <descriptorRefs>
+                                <descriptorRef>some-assembly-configs</descriptorRef>
+                                </descriptorRefs>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+                <!-- end of maven assembly plugin -->
+			</plugins>
+	</pluginManagement>
+```
